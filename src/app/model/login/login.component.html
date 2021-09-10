@@ -1,0 +1,88 @@
+<div class="BG-Color">
+    <!-- <div class="dash-header col-xs-12 col-sm-12 col-md-12 col-lg-12">
+       <div class="row cetre-content">
+<div class="cetre-content alligncenter-justify col-xs-6 col-sm-6 col-md-6 col-lg-6"><img src="assets/CompanyName.png" alt="Img"></div>
+<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+   <span class="Upcoming-Program col-xs-3 col-sm-3 col-md-3 col-lg-3">Upcoming Program</span>
+   <span class="Upcoming-Program col-xs-3 col-sm-3 col-md-3 col-lg-3">How it works</span>
+   <span class="Upcoming-Program col-xs-3 col-sm-3 col-md-3 col-lg-3">Sign Up</span>
+   <span class="col-xs-3 col-sm-3 col-md-3 col-lg-3">  <button class='Rectangle-13-login1' type='button'>Login</button></span></div>
+
+       </div>
+    </div> -->
+
+    <div class="dash-header col-12">
+      <div class="width50 height100 paddingR0">
+  
+      <span class="dash-msg">
+         <img src="assets/CompanyName.png" alt="Img"></span>
+      </div>
+      <div class="width50 height100 paddingL0 removehead"> 
+          <span class="vertcenter">
+            <span class="Upcoming-Program col-4">Upcoming Program</span>
+            <span class="Upcoming-Program col-3">How it works</span>
+            <span class="Upcoming-Program col-2">Sign Up</span>
+            <span class="col-3">  <button class='Rectangle-13-login1' type='button' (click)="navigateToDash()">Login</button></span>
+      </span>
+   
+      </div> 
+  </div>
+
+    <div class="dash-body col-xs-12 col-sm-12 col-md-12 col-lg-12">
+       <div class="card">
+
+        <div class="card-head"><span class="User-Login">User Login</span></div>
+        <div class="card-body">
+
+           <div class="row">
+         <div class='form-group col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+            <label class="Email-address control-label col-xs-12 col-sm-12 col-md-12 col-lg-12">Email address <span>*</span> </label>
+               <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+                  <div class='form-group'>
+                         <input name='email' class='Rectangle-167 form-control feild-height' type='text' [(ngModel)]="emialAdd" required>
+                         <span *ngIf="!emialAdd.trim() && submitted" style="color:red">Email address is mandatory</span>
+                         <span *ngIf="invalidEmail && submitted" style="color:red">Email address is invalid</span>
+                         <!-- <span ng-show="regform.$submitted && regform.fnm.$error.required" style="color:red">First name is required</span>
+                         <span ng-show="regform.$submitted && regform.fnm.$error.pattern" style="color:red">Enter a valid first name</span> -->
+               </div>
+            </div>
+            <label class="Email-address control-label col-xs-12 col-sm-12 col-md-12 col-lg-12">Password <span>*</span> </label>
+            <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+               <div class='form-group'>
+                      <input name='passwrd' class='Rectangle-167 form-control feild-height' type='password' [(ngModel)]="userPassword"   required>
+                      <span *ngIf="!userPassword.trim() && submitted" style="color:red">Password is mandatory</span>
+                      <!-- <span ng-show="regform.$submitted && regform.fnm.$error.required" style="color:red">First name is required</span>
+                      <span ng-show="regform.$submitted && regform.fnm.$error.pattern" style="color:red">Enter a valid first name</span> -->
+                      <div class="Forgot-password col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+                        Forgot password?
+                         </div>
+                     </div>
+            
+         </div>
+     
+         </div>
+      </div>
+         <div class='form-group col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+            <div class="row">
+               <div class="New-user col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+                 New User!
+                  </div>
+            <div class="width50 col-xs-6 col-sm-6 col-md-6 col-lg-6" >
+           <button class='Rectangle-13' type='button'>Sign Up</button>
+           </div>
+           <div class="width50 col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <button class='Rectangle-13-login' type='button' (click)="checklogIn()">Login</button>
+            </div>
+         </div>
+     
+      </div>
+
+   
+         
+
+        </div>
+
+       </div>
+    </div>
+    
+    </div>

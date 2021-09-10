@@ -1,0 +1,3 @@
+npm i -g angular-cli-ghpages
+npm run optimised-github-build
+ngh --dir dist/Amvi

@@ -1,0 +1,130 @@
+<div class="bg-head-comp">
+<div class="bg-dash-header col-12">
+    <div class="width50 height100 paddingR0 col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+    <span class="dash-msg">
+        <img (click)="navigateTo('dashboard')" class="menu" src="assets/Icon ionic-ios-menu.png" alt="Img"/>
+        <img  class="comp-name" src="assets/CompanyName (2).png" alt="Img"/> </span>
+    </div>
+    <div class="width50 height100 paddingL0 col-xs-8 col-sm-8 col-md-8 col-lg-8"> 
+        <span class="vertcenter">
+            <div class="search"><input class="inp-search" type="text" /></div>
+        <span class="bg-Ellipse-65 marginR9">
+        
+            <img  class="bg-img-mar" src="assets/Icon feather-search.png" alt="Img"/></span>
+       <span class="bg-Ellipse-65 marginR9">
+        <span class="red-circle"></span>
+           <img  class="bg-img-mar" src="assets/Icon feather-bell.png" alt="Img"/></span>
+       
+          <div class="marginR9 userdet">
+              <span class="usernm"> User Name</span>
+              <br/>
+            <span class="mentor">Mentor
+                </span>
+          </div>
+        
+
+           <span class="bg-Ellipse-65 marginR9">
+            <img mat-icon-button [matMenuTriggerFor]="menu" class="img-mar-pro" src="assets/images.png" alt="Img"/>
+           
+              <mat-menu #menu="matMenu">
+                <div class="matmenu-bar" mat-menu-item (click)="navigateTo('profile')">
+                    <div class="displyflex nopad-menu col-12">
+                        <div class="col-1 padleft mart7p">
+                            <img class="vertalig" alt="Img" src="assets/Icon feather-user.png">
+                        </div>
+                        <div class="padCusmenu col-9 userdet-menu"> 
+                            <div class="row no-padd-menu">
+                            <span class="usernm-menu col-12">Profile</span>
+                        
+                            <span class="mentor-menu col-12">Edit your profile</span>
+                        </div>
+                        </div>
+                        <div class="col-2 pad3 mart7p">
+                            <img alt="Img" src="assets/Icon awesome-chevron-right.png">
+                        </div>
+                    </div>
+                 
+                </div>
+                <div class="matmenu-bar" mat-menu-item (click)="navigateTo('settings')">
+                    <div class="displyflex nopad-menu col-12">
+                        <div class="col-1 padleft mart7p">
+                            <img class="vertalig" alt="Img" src="assets/Icon feather-settings (2).png">
+                        </div>
+                        <div class="padCusmenu col-9 userdet-menu"> 
+                            <div class="row no-padd-menu">
+                            <span class="usernm-menu col-12">Settings</span>
+                        
+                            <span class="mentor-menu col-12">Dashboard Settings</span>
+                        </div>
+                        </div>
+                        <div class="col-2 pad3 mart7p">
+                            <img alt="Img" src="assets/Icon awesome-chevron-right.png">
+                        </div>
+                    </div>
+                 
+                </div>
+                <div class="matmenu-bar" mat-menu-item (click)="navigateTo('task')">
+                    <div class="displyflex nopad-menu col-12">
+                        <div class="col-1 padleft mart7p">
+                            <img class="vertalig" alt="Img" src="assets/Icon material-chat_bubble_outline.png">
+                        </div>
+                        <div class="padCusmenu col-9 userdet-menu"> 
+                            <div class="row no-padd-menu">
+                            <span class="usernm-menu col-12">Messages</span>
+                        
+                            <span class="mentor-menu col-12">3 new messages</span>
+                        </div>
+                        </div>
+                        <div class="col-2 pad3 mart7p">
+                            <img alt="Img" src="assets/Icon awesome-chevron-right.png">
+                        </div>
+                    </div>
+                 
+                </div>
+
+                <div class="matmenu-bar" mat-menu-item>
+                    <div class="displyflex nopad-menu col-12">
+                        <div class="col-1 padleft mart7p">
+                            <img class="vertalig" alt="Img" src="assets/Icon feather-bell (2).png">
+                        </div>
+                        <div class="padCusmenu col-9 userdet-menu"> 
+                            <div class="row no-padd-menu">
+                            <span class="usernm-menu col-12">Notification</span>
+                        
+                            <span class="mentor-menu col-12">no new notification</span>
+                        </div>
+                        </div>
+                        <div class="col-2 pad3 mart7p">
+                            <img alt="Img" src="assets/Icon awesome-chevron-right.png">
+                        </div>
+                    </div>
+                 
+                </div>
+
+                <div class="matmenu-bar" mat-menu-item (click)="navigateTo('logout')">
+                    <div class="displyflex nopad-menu col-12">
+                        <div class="col-1 padleft mart7p">
+                            <img class="vertalig" alt="Img" src="assets/Icon awesome-sign-in-alt.png">
+                        </div>
+                        <div class="padCusmenu col-9 userdet-menu"> 
+                            <div class="row no-padd-menu">
+                            <span class="usernm-menu col-12">Sign Out</span>
+                        
+                            <span class="mentor-menu col-12">Exit the Application</span>
+                        </div>
+                        </div>
+                        <div class="col-2 pad3 mart7p">
+                            <img alt="Img" src="assets/Icon awesome-chevron-right.png">
+                        </div>
+                    </div>
+                 
+                </div>
+              </mat-menu>
+        
+        </span>
+    </span>
+ 
+    </div> 
+</div>
+</div>

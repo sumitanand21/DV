@@ -1,0 +1,123 @@
+<div class="task-head">
+   <span class="task-msg width50 col-xs-8 col-sm-8 col-md-8 col-lg-8">New Task</span>
+   <span class="width50 col-xs-4 col-sm-4 col-md-4 col-lg-4 marauto">
+   <span class="Path-979" mat-dialog-close>
+      <img  class="img-mar" src="assets/Icon material-close.png" alt="Img"/></span>
+   </span>
+   <!-- <span class="width50 col-xs-4 col-sm-4 col-md-4 col-lg-4"> <div class="Path-979">
+      <img src="assets/Icon material-close@2x.png" alt="Img">
+
+
+   </div> </span> -->
+   
+  
+</div>
+<div class="task-body">
+    <div class="container no-padd-task">
+    <div class="row">
+        <div class='form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-btm0'>
+           <label class="label-tags control-label col-xs-12 col-sm-12 col-md-12 col-lg-12">Name of the Task <span>*</span> </label>
+              <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+                 <div class='form-group'>
+                        <input name='nott' class='Input-feild form-control feild-height30' type='text'  [(ngModel)]="taskDetails.taskName" required>
+                        <span *ngIf="!taskDetails.taskName.trim() && submitted" style="color:red">Name of the task is mandatory</span>
+
+              </div>
+           </div>
+        </div>
+
+        <div class='form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-btm0'>
+           <label class="label-tags control-label col-xs-12 col-sm-12 col-md-12 col-lg-12">Description (details) <span>*</span> </label>
+           <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+              <div class='form-group'>
+                     <input name='dd' class='Input-feild form-control feild-height50' type='text' [(ngModel)]="taskDetails.description"  required>
+                     <span *ngIf="!taskDetails.description.trim() && submitted" style="color:red">Description is mandatory</span>
+                  
+                    </div>
+           
+        </div>
+    </div>
+
+    <div class='form-group col-xs-12 col-sm-12 col-md-6 col-lg-6 margin-btm0'>
+        <label class="label-tags control-label col-xs-12 col-sm-12 col-md-12 col-lg-12">Type of Task <span>*</span> </label>
+        <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+           <div class='form-group'>
+            <select  name='tot' class="select-input form-control feild-height30" [(ngModel)]="taskDetails.tOTask" required>
+              <option  value="" disabled selected>Select type</option>
+              <option  value = '1'>Read</option>
+              <option  value = '2'>Watch video</option>
+              <option  value = '3'>Project</option>
+              <option  value = '4'>Master-class</option>
+              <option  value = '5'>Check-in</option>
+              <option  value = '6'>Day in life</option>
+             </select>
+             <span *ngIf="!taskDetails.tOTask && submitted" style="color:red">Type of Task is mandatory</span>
+                 </div>
+        
+     </div>
+ </div>
+
+ <div class='form-group col-xs-12 col-sm-12 col-md-6 col-lg-6 margin-btm0'>
+    <label class="label-tags control-label col-xs-12 col-sm-12 col-md-12 col-lg-12">Task evaluation <span>*</span> </label>
+    <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+       <div class='form-group'>
+         <select  name='te' class="select-input form-control feild-height30" [(ngModel)]="taskDetails.tEval" required>
+            <option  value="" disabled selected>Select evaluation</option>
+            <option  value = '1'>Mentor feedback</option>
+            <option  value = '2'>Submission</option>
+            <option  value = '3'>Self Evaluation</option>
+           </select>
+           <span *ngIf="!taskDetails.tEval && submitted" style="color:red">Task evaluation is mandatory</span>
+           
+             </div>
+    
+ </div>
+</div>
+
+<div class='form-group col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-btm0'>
+    <label class="label-tags control-label col-xs-12 col-sm-12 col-md-12 col-lg-12">Evaluation description <span>*</span> </label>
+    <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+       <div class='form-group'>
+              <input name='ed' class='Input-feild form-control feild-height30' type='text' [(ngModel)]="taskDetails.eDesc"  required>
+              <span *ngIf="!taskDetails.eDesc.trim() && submitted" style="color:red">Evaluation description is mandatory</span>
+             </div>
+    
+ </div>
+</div>
+
+<div class='form-group col-xs-12 col-sm-12 col-md-6 col-lg-6 margin-btm0'>
+    <label class="label-tags control-label col-xs-12 col-sm-12 col-md-12 col-lg-12">Start <span>*</span> </label>
+    <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+       <div class='form-group'>
+         <input name='start' class='Input-feild form-control feild-height30 datepicker' type='date' [(ngModel)]="taskDetails.startDate" placeholder='' id = 'st' required>
+         <span *ngIf="!taskDetails.startDate && submitted" style="color:red">Start date is mandatory</span>
+             </div>
+    
+ </div>
+</div>
+
+<div class='form-group col-xs-12 col-sm-12 col-md-6 col-lg-6'>
+    <label class="label-tags control-label col-xs-12 col-sm-12 col-md-12 col-lg-12">End <span>*</span> </label>
+    <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+       <div class='form-group'>
+         <input name='end' class='Input-feild form-control feild-height30 datepicker' type='date' [(ngModel)]="taskDetails.endDate" placeholder='' id = 'en' required>
+         <span *ngIf="!taskDetails.endDate && submitted" style="color:red">End date is mandatory</span>
+             </div>
+    
+ </div>
+</div>
+
+<div class='form-group width50 col-xs-6 col-sm-6 col-md-6 col-lg-6'> 
+    <div class='form-group col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+        <button class='cancel-btn' mat-dialog-close type='button'>Cancel</button>
+</div>
+</div>
+
+<div class='form-group width50 col-xs-6 col-sm-6 col-md-6 col-lg-6'> 
+    <div class='form-group col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+         <button class='save-btn' type='button' (click)="savedetails()">Save</button>
+    </div>
+</div>
+
+</div>
+</div>
